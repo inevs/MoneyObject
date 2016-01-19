@@ -12,6 +12,7 @@
 		262967A21C4E978F00E8D3C4 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262967A01C4E978F00E8D3C4 /* Money.swift */; };
 		262967A31C4E978F00E8D3C4 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262967A11C4E978F00E8D3C4 /* Currency.swift */; };
 		262967A51C4E97A000E8D3C4 /* MoneyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262967A41C4E97A000E8D3C4 /* MoneyTest.swift */; };
+		262967AC1C4E9DBD00E8D3C4 /* Money+Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262967AB1C4E9DBD00E8D3C4 /* Money+Arithmetic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		262967A01C4E978F00E8D3C4 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		262967A11C4E978F00E8D3C4 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		262967A41C4E97A000E8D3C4 /* MoneyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyTest.swift; sourceTree = "<group>"; };
+		262967AB1C4E9DBD00E8D3C4 /* Money+Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Money+Arithmetic.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				262967A11C4E978F00E8D3C4 /* Currency.swift */,
 				262967891C4E972900E8D3C4 /* MoneyObject.h */,
 				2629678B1C4E972900E8D3C4 /* Info.plist */,
+				262967AB1C4E9DBD00E8D3C4 /* Money+Arithmetic.swift */,
 			);
 			path = MoneyObject;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				262967A31C4E978F00E8D3C4 /* Currency.swift in Sources */,
+				262967AC1C4E9DBD00E8D3C4 /* Money+Arithmetic.swift in Sources */,
 				262967A21C4E978F00E8D3C4 /* Money.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +391,7 @@
 				2629679C1C4E972900E8D3C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2629679D1C4E972900E8D3C4 /* Build configuration list for PBXNativeTarget "MoneyObjectTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +400,7 @@
 				2629679F1C4E972900E8D3C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

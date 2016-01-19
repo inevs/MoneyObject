@@ -43,6 +43,15 @@ class MoneyTest: XCTestCase {
 	func testCanBeSubtractedFromMoneyWithSameCurrency() {
 		XCTAssertEqual(Money(1000, "EUR") - Money(750, "EUR"), Money(250, "EUR"))
 	}
+	
+	func testReturnsNilIfCurrenciesAreNotEqualOnArithmetics() {
+		XCTAssertNil(Money(1000, "EUR") + Money(500, "USD"))
+		XCTAssertNil(Money(1000, "EUR") - Money(500, "USD"))
+	}
+	
+	func testCanHandleNegativeCents() {
+		XCTAssertEqual(Money(500, "EUR") - Money(1000, "EUR"), Money(-500, "EUR"))
+	}
 
 	func testCanBeMultipliedByScalar() {
 		XCTAssertEqual(Money(1000, "EUR") * 5, Money(5000, "EUR"))
@@ -54,11 +63,7 @@ class MoneyTest: XCTestCase {
 	}
 
 	func testCanBeFormattedToString() {
-		let money = Money(500, "EUR")
-		XCTAssertEqual(money.format(), "5.00 EUR")
+		XCTAssertEqual(Money(500, "EUR").format(), "5.00 EUR")
+		XCTAssertEqual(Money(-500, "EUR").format(), "-5.00 EUR")
 	}
-
-
-
-	
 }
