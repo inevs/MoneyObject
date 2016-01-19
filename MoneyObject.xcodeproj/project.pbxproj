@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		2629678A1C4E972900E8D3C4 /* MoneyObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 262967891C4E972900E8D3C4 /* MoneyObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		262967911C4E972900E8D3C4 /* MoneyObject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262967861C4E972900E8D3C4 /* MoneyObject.framework */; };
-		262967961C4E972900E8D3C4 /* MoneyObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262967951C4E972900E8D3C4 /* MoneyObjectTests.swift */; };
+		262967A21C4E978F00E8D3C4 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262967A01C4E978F00E8D3C4 /* Money.swift */; };
+		262967A31C4E978F00E8D3C4 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262967A11C4E978F00E8D3C4 /* Currency.swift */; };
+		262967A51C4E97A000E8D3C4 /* MoneyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262967A41C4E97A000E8D3C4 /* MoneyTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +29,10 @@
 		262967891C4E972900E8D3C4 /* MoneyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoneyObject.h; sourceTree = "<group>"; };
 		2629678B1C4E972900E8D3C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		262967901C4E972900E8D3C4 /* MoneyObjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyObjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		262967951C4E972900E8D3C4 /* MoneyObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyObjectTests.swift; sourceTree = "<group>"; };
 		262967971C4E972900E8D3C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		262967A01C4E978F00E8D3C4 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		262967A11C4E978F00E8D3C4 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		262967A41C4E97A000E8D3C4 /* MoneyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		262967881C4E972900E8D3C4 /* MoneyObject */ = {
 			isa = PBXGroup;
 			children = (
+				262967A01C4E978F00E8D3C4 /* Money.swift */,
+				262967A11C4E978F00E8D3C4 /* Currency.swift */,
 				262967891C4E972900E8D3C4 /* MoneyObject.h */,
 				2629678B1C4E972900E8D3C4 /* Info.plist */,
 			);
@@ -80,7 +86,7 @@
 		262967941C4E972900E8D3C4 /* MoneyObjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				262967951C4E972900E8D3C4 /* MoneyObjectTests.swift */,
+				262967A41C4E97A000E8D3C4 /* MoneyTest.swift */,
 				262967971C4E972900E8D3C4 /* Info.plist */,
 			);
 			path = MoneyObjectTests;
@@ -194,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262967A31C4E978F00E8D3C4 /* Currency.swift in Sources */,
+				262967A21C4E978F00E8D3C4 /* Money.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				262967961C4E972900E8D3C4 /* MoneyObjectTests.swift in Sources */,
+				262967A51C4E97A000E8D3C4 /* MoneyTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +316,7 @@
 		2629679B1C4E972900E8D3C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +327,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.shg.MoneyObject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2629679C1C4E972900E8D3C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
